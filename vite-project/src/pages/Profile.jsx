@@ -87,7 +87,7 @@ function Profile() {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/orders",
+        "https://smartparcel-backend.onrender.com/api/orders",
         {
           method: "GET",
 

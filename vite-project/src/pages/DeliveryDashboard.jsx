@@ -127,7 +127,7 @@ export default function DeliveryDashboard() {
         setGpsStatus("GPS Active");
 
         try {
-          await fetch("http://localhost:5000/api/delivery/location", {
+          await fetch("https://smartparcel-backend.onrender.com/api/delivery/location", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -167,7 +167,7 @@ export default function DeliveryDashboard() {
       const token = localStorage.getItem("deliveryToken");
 
       const response = await fetch(
-        "http://localhost:5000/api/delivery/orders",
+        "https://smartparcel-backend.onrender.com/api/delivery/orders",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -277,7 +277,7 @@ const calculateCustomerRoute = async (order) => {
 
   try {
     const response = await fetch(
-      "http://localhost:5000/api/delivery/optimize-route",
+      "https://smartparcel-backend.onrender.com/api/delivery/optimize-route",
       {
         method: "POST",
         headers: {
@@ -368,7 +368,7 @@ const geometry = rawGeometry.map(([longitude, latitude]) => [
       const token = localStorage.getItem("deliveryToken");
 
       const response = await fetch(
-        `http://localhost:5000/api/delivery/orders/${orderId}/status`,
+        `https://smartparcel-backend.onrender.com/api/delivery/orders/${orderId}/status`,
         {
           method: "PATCH",
           headers: {

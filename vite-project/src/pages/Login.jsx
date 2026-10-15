@@ -99,7 +99,7 @@ function Login() {
     try {
       // Check MongoDB user
       const response = await fetch(
-        "http://localhost:5000/api/users/check-user",
+        "https://smartparcel-backend.onrender.com/api/users/check-user",
         {
           method: "POST",
 
@@ -213,7 +213,7 @@ function Login() {
       // ==================================
 
       const response = await fetch(
-        "http://localhost:5000/api/users/otp-login",
+        "https://smartparcel-backend.onrender.com/api/users/otp-login",
         {
           method: "POST",
 

@@ -52,7 +52,7 @@ function AdminOrders() {
       const token = localStorage.getItem("adminToken");
 
       const response = await fetch(
-        "http://localhost:5000/api/admin/orders",
+        "https://smartparcel-backend.onrender.com/api/admin/orders",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -93,7 +93,7 @@ function AdminOrders() {
       const token = localStorage.getItem("adminToken");
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/orders/${orderId}/status`,
+        `https://smartparcel-backend.onrender.com/api/admin/orders/${orderId}/status`,
         {
           method: "PATCH",
           headers: {

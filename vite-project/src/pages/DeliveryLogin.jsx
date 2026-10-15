@@ -18,7 +18,7 @@ export default function DeliveryLogin() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/delivery/login",
+        "https://smartparcel-backend.onrender.com/api/delivery/login",
         {
           method: "POST",
           headers: {

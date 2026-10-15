@@ -58,7 +58,7 @@ function TrackParcel() {
         }
 
         const response = await fetch(
-          "http://localhost:5000/api/orders",
+          "https://smartparcel-backend.onrender.com/api/orders",
           {
             method: "GET",
             headers: {
@@ -169,7 +169,7 @@ function TrackParcel() {
 
       if (value.length === 24) {
         const response = await fetch(
-          `http://localhost:5000/api/orders/${value}`,
+          `https://smartparcel-backend.onrender.com/api/orders/${value}`,
           {
             method: "GET",
             headers: {
